@@ -34,16 +34,16 @@ public class AutokeyCipher {
 
         try {
             // Input plaintext and key
-            System.out.print("Enter plaintext (uppercase letters only): ");
+            System.out.print("Enter plaintext (lowercase letters only): ");
             String plaintext = sc.nextLine().toUpperCase();
             if (!plaintext.matches("[A-Z]+")) {
                 throw new IllegalArgumentException("Plaintext must contain only uppercase letters.");
             }
 
-            System.out.print("Enter key (uppercase letters only): ");
-            String key = sc.nextLine().toUpperCase();
+            System.out.print("Enter key (lowercase letters only): ");
+            String key = sc.nextLine().toLowerCase();
             if (!key.matches("[A-Z]+")) {
-                throw new IllegalArgumentException("Key must contain only uppercase letters.");
+                throw new IllegalArgumentException("Key must contain only lowercase letters.");
             }
 
             // Encrypt the plaintext
